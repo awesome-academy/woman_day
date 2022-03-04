@@ -1,0 +1,231 @@
+
+.container-g {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+}
+
+.wrapper-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nguyen-thi-huong {
+    background-color: #f1b5b8;
+
+    
+
+    .container-left {
+        background-color: #ffffff;
+        flex-basis: 50%;
+        position: relative;
+        top: -40px;
+        left: 20px;
+        box-shadow: 20px 20px 10px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .info {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        
+        h4 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            padding: 0 35px;
+            text-align: center;
+        }
+    }
+
+    .container-right {
+        flex-basis: 50%;
+    }
+
+    img {
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+        position: relative;
+        top: 30px;
+        right: 0px;
+    }
+}
+
+
+
+/*Vu Thi Ngoc*/
+.vu-thi-ngoc {
+    background-color: #f9e79b;
+
+    .wrapper-inner {
+        flex-direction: row-reverse;
+        background-color: #f1c50e;
+    }
+
+    .container-left {
+        flex-basis: 90%;
+    }
+
+    .container-right {
+        flex-basis: 50%;
+        position: relative;
+        width: 500px;
+        height: 500px;
+    }
+
+    .info {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        
+        h4 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            padding: 0 35px;
+            text-align: center;
+        }
+    }
+
+    .img-container {
+        position: absolute;
+        top: 50px;
+        left: -50px;
+    }
+
+    img {
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+    }
+}
+
+
+/*Dang Thi Duyen*/
+.dang-thi-duyen {
+    background-color: rgb(92, 151, 230);
+
+    .img-container {
+        padding: 20px 20px 1px 20px;
+        background-color: #ffffff;
+        transform: rotate(10deg);
+        width: 450px;
+        border-radius: 5px;
+    }
+
+    .info {
+        background: #ffffff;
+        padding: 10px;
+        border-radius: 5px;
+        transform: rotate(-10deg);
+        position: relative;
+        left: -30px;
+
+        h4 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .fa-heart {
+        color: rgb(238, 32, 77);
+        font-size: 30px;
+    }
+
+    .hearts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 26px 80px;
+    }
+}
+
+
+
+/*Doan Thuy Phuong*/
+.doan-thuy-phuong {
+    background-color: rgb(241, 209, 167);
+
+    .wrapper-inner {
+        flex-direction: row-reverse;
+        background-color: rgb(241, 194, 133);
+        border-radius: 20px;
+    }
+
+    .container-left {
+        flex-basis: 60%;
+    }
+
+    .container-right {
+        flex-basis: 40%;
+    }
+
+    .img-container {
+        img {
+            border-radius: 50%;
+            box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+            object-fit: cover;
+        }
+    }
+
+    .info {
+        margin: 30px;
+        text-align: center;
+
+        h4 {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+
+/*Ta Thi Minh Huyen*/
+.ta-thi-minh-huyen {
+    background-color: rgb(172, 243, 219);
+
+    .wrapper-inner {
+        flex-direction: column-reverse;
+    }
+
+    .container-left {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .info {
+
+        h4 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .img-container {
+        position: relative;
+        top: 30px;
+        right: -150px;
+
+        img {
+            height: 400px;
+            width: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+        }
+    }
+}
