@@ -1,0 +1,102 @@
+.hieu {
+
+ .content-1 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(253, 216, 248);
+
+
+  .content-hien {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 30px;
+
+   .text {
+    max-width: 30vw;
+   }
+
+   .image {
+    position: relative;
+    &--1 {
+      height: 330px;
+    }
+    &--2 {
+       height: 200px;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate(-50%,-50%);
+    }
+   }
+  }
+
+  .content-ngocanh {
+   display: flex;
+   flex-direction: column-reverse;
+   gap: 20px;
+
+    .text {
+    max-width: 30vw;
+   }
+
+   .image {
+    position: relative;
+     &--1 {
+      height: 300px;
+     }
+     &--2 {
+      height: 200px;
+      position: absolute;
+      left: -20%;
+      top: -10%
+     }
+   }
+  }
+
+ }
+
+ .content-2 {
+   background-color: rgb(253, 216, 248);
+   height: 100vh;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+
+   p {
+    color: #fff;
+   }
+
+   div {
+    height: 80%;
+    width: 25%;
+    background-color: aliceblue;
+   }
+
+   .content-nhung {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(121, 114, 114, 0.001)) , url('../images/hieu/nhung1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+
+   .content-hang {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.001),rgba(54, 53, 53, 0.5)) , url('../images/hieu/hang1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+   
+   }
+
+   .content-ngoc {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.001),rgba(0, 0, 0, 0.5)) , url('../images/hieu/ngoc1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+   }
+ }
+}
