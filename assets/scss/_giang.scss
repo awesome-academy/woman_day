@@ -1,3 +1,28 @@
+/*Responsive*/
+$breakpoints: (
+  smallphone-and-down: '(max-width: 399px)',
+  phone-and-down: '(max-width: 575px)',
+  tablet-and-down: '(max-width: 767px)',
+  desktop-and-down: '(max-width: 991px)',
+  largedesktop-and-down: '(max-width: 1199px)',
+  extralarge-and-down: '(max-width: 1439px)',
+);
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+    @media #{$query} {
+      @content;
+    }
+  }
+}
+
+
 
 .container-g {
     width: 1000px;
@@ -6,7 +31,12 @@
     justify-content: center;
     align-items: center;
     height: 650px;
+
+    @include respond-to('smallphone-and-down') {
+       width: 100%;
+    }
 }
+
 
 .wrapper-inner {
     display: flex;
@@ -26,6 +56,17 @@
         top: -40px;
         left: 20px;
         box-shadow: 20px 20px 10px 2px rgba(0, 0, 0, 0.5);
+
+        @include respond-to('smallphone-and-down') {
+            top: 0px;
+            left: 0px;
+         }
+    }
+
+    .wrapper-inner {
+        @include respond-to('smallphone-and-down') {
+            flex-direction: column;
+         }
     }
 
     .info {
@@ -35,6 +76,10 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+
+        @include respond-to('smallphone-and-down') {
+            height: 300px;
+         }
 
         
         h4 {
@@ -58,6 +103,10 @@
         position: relative;
         top: 30px;
         right: 0px;
+        @include respond-to('smallphone-and-down') {
+            width: 200px;
+            height: 200px;
+         }
     }
 }
 
@@ -70,6 +119,9 @@
     .wrapper-inner {
         flex-direction: row-reverse;
         background-color: #f1c50e;
+        @include respond-to('smallphone-and-down') {
+            flex-direction: column;
+         }
     }
 
     .container-left {
@@ -81,6 +133,11 @@
         position: relative;
         width: 500px;
         height: 500px;
+        @include respond-to('smallphone-and-down') {
+            width: auto;
+            height: auto;
+         }
+        
     }
 
     .info {
@@ -90,6 +147,9 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        @include respond-to('smallphone-and-down') {
+            height: 300px;
+         }
 
         
         h4 {
@@ -106,12 +166,23 @@
         position: absolute;
         top: 50px;
         left: -50px;
+        @include respond-to('smallphone-and-down') {
+            top: 10px;
+            left: 0px;
+            position: relative;
+            box-shadow: 0px 0px 5px 1px rgba(0, 0, 0,  0.5);
+         }
+        
     }
 
     img {
         width: 400px;
         height: 400px;
         object-fit: cover;
+        @include respond-to('smallphone-and-down') {
+            width: 200px;
+            height: 200px;
+         }
     }
 }
 
@@ -120,12 +191,32 @@
 .dang-thi-duyen {
     background-color: rgb(92, 151, 230);
 
+    @include respond-to('smallphone-and-down') {
+        height: 700px;
+     }
+
+     .container-right {
+        @include respond-to('smallphone-and-down') {
+            position: relative;
+            top: 38px;
+         }
+     }
+
+    .wrapper-inner {
+        @include respond-to('smallphone-and-down') {
+            flex-direction: column;
+         }
+    }
+
     .img-container {
         padding: 20px 20px 1px 20px;
         background-color: #ffffff;
         transform: rotate(10deg);
         width: 450px;
         border-radius: 5px;
+        @include respond-to('smallphone-and-down') {
+            width: 240px;
+         }
     }
 
     .info {
@@ -139,6 +230,11 @@
         h4 {
             margin-bottom: 20px;
         }
+
+        @include respond-to('smallphone-and-down') {
+            left: 0;
+            width: 300px;
+         }
     }
 
     .fa-heart {
@@ -151,6 +247,14 @@
         justify-content: space-between;
         align-items: center;
         margin: 26px 80px;
+    }
+
+    img {
+        object-fit: cover;
+        @include respond-to('smallphone-and-down') {
+            width: 200px;
+            height: 200px;
+         }
     }
 }
 
@@ -219,6 +323,10 @@
         position: relative;
         top: 30px;
         right: -150px;
+        @include respond-to('smallphone-and-down') {
+            top: 12px;
+            right: -80px;
+         }
 
         img {
             height: 400px;
@@ -226,6 +334,10 @@
             object-fit: cover;
             border-radius: 10px;
             box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+            @include respond-to('smallphone-and-down') {
+                width: 200px;
+                height: 200px;
+             }
         }
     }
 }
