@@ -42,8 +42,8 @@ document.addEventListener('mousemove', function (e) {
   heart.style.left = x + 'px';
   heart.style.top = y + 'px';
   var size = Math.random() * 100;
-  heart.style.width = 5 + size + 'px';
-  heart.style.height = 5 + size + 'px';
+  heart.style.width = size + 'px';
+  heart.style.height = size + 'px';
   body.appendChild(heart);
   setTimeout(function () {
     heart, remove();
