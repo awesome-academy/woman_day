@@ -3,6 +3,10 @@
 
     &__img {
         padding: 45px 30px;
+
+        @media #{$xs} {
+            padding: 30px 15px;
+        }
         overflow: hidden;
 
         img {
@@ -10,6 +14,10 @@
             border-radius: 6px;
             transition: transform 1s ease;
         }
+    }
+
+    .card-body {
+        padding: 10px;
     }
 
     &__img:hover img {
@@ -30,6 +38,10 @@
     background-color: $white;
     padding: 45px;
 
+    @media #{$xs} {
+        padding: 20px;
+    }
+
     &__wrapper {
         border: 1px solid $border-color;
         border-radius: 6px;
@@ -43,9 +55,12 @@
     }
 
     &__title {
-        font-size: 60px;
         font-weight: 800;
         line-height: 72px;
+
+        @media #{$xs} {
+            font-size: 27px;
+        }
     }
 
     &__text {
