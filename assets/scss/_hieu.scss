@@ -1,12 +1,17 @@
 .girl {
- background-color: rgb(253, 216, 248);
- padding: 20px ;
- text-align: center;
+  background-color: rgb(253, 216, 248);
+  padding: 20px ;
+  text-align: center;
+ 
+  @media #{$xs} {
+    padding: 10px ;
+  }
 
  p {
-   text-align: justify;
-   margin: 0 20px
+    text-align: justify;
+    margin: 0 20px
  }
+
  img {
     width: 100%;
     height: 450px;
@@ -28,12 +33,12 @@
   padding: 20px 5%;
 
   @media (max-width: 768px) {
-    padding: 15px 15%;
+    padding: 15px 5px;
    }
 
     &__box {
      border-radius: 5px;
-     padding: 3px;
+     padding: 5px;
      background: #fff;
      border-bottom-left-radius: 10px;
      border-bottom-right-radius: 10px;
